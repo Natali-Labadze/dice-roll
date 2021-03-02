@@ -1,0 +1,31 @@
+@import './../moduls/variable.scss';
+@import './../moduls/mixins';
+@import './../moduls/private';
+@import './../moduls/function';
+header {
+    background-color: $red;
+    padding: $size02 0;
+    @include position(fixed);
+    @include positionValues(50px, 50px);
+    @extend %container;
+    width: sum(600px, 200px);
+    .flex {
+        @include display(flex);
+        @include flex(space-between, flex-end);
+        .logo {
+            font-size: $size02;
+        }
+        .navbar {
+            @include display(flex);
+            @include flex(center, center);
+            .navbar_li {
+                // font-size: $size03;
+                // margin: 0 $size01;
+                @extend %title;
+            }
+            &:hover {
+                background-color: blue;
+            }
+        }
+    }
+}
