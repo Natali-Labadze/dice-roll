@@ -47,6 +47,7 @@ const dicex = function() {
         diceEl.classList.remove('hidden')
         diceEl.src = `dice-${dice}.png`
 
+
         if (dice !== 1) {
             currentScore += dice
 
@@ -70,8 +71,8 @@ btnHold.addEventListener('click', function() {
     scores[activePlayer] += currentScore
         // this equals scores[1] = scores[1] + currentScore or scores[0] = scores[0] + currentScore
     document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer]
-        // check if palyer's score is >=100
-    if (scores[activePlayer] >= 20) {
+        // check if palyer's score is >= 30
+    if (scores[activePlayer] >= 30) {
         playing = false
         diceEl.classList.add('hidden')
 
